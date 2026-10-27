@@ -192,11 +192,11 @@
       <h2 id="t-servicios">Lo que hacemos</h2>
       <p class="muted intro">Escríbenos por WhatsApp y te compartimos precios y disponibilidad.</p>
       <div class="grid-servicios">
-        <div class="servicio"><div class="tarjeta"><span class="nombre">Laminado de cejas</span><span class="muted">Cejas peinadas, llenas y con dirección.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa href="#contacto">Agendar</a></div>
-        <div class="servicio"><div class="tarjeta"><span class="nombre">Lash lifting</span><span class="muted">Tus pestañas naturales, levantadas y curvadas.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa href="#contacto">Agendar</a></div>
-        <div class="servicio"><div class="tarjeta"><span class="nombre">Extensiones de pestañas</span><span class="muted">Una mirada más definida, a la medida de tu rostro.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa href="#contacto">Agendar</a></div>
-        <div class="servicio"><div class="tarjeta"><span class="nombre">Micropigmentación</span><span class="muted">Pigmento semipermanente para definir y dar color.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa href="#contacto">Agendar</a></div>
-        <div class="servicio"><div class="tarjeta"><span class="nombre">Faciales</span><span class="muted">Cuidado de la piel para un acabado fresco y uniforme.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa href="#contacto">Agendar</a></div>
+        <div class="servicio"><div class="tarjeta"><span class="nombre">Laminado de cejas</span><span class="muted">Cejas peinadas, llenas y con dirección.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa data-servicio="Laminado de cejas" href="#contacto">Agendar</a></div>
+        <div class="servicio"><div class="tarjeta"><span class="nombre">Lash lifting</span><span class="muted">Tus pestañas naturales, levantadas y curvadas.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa data-servicio="Lash lifting" href="#contacto">Agendar</a></div>
+        <div class="servicio"><div class="tarjeta"><span class="nombre">Extensiones de pestañas</span><span class="muted">Una mirada más definida, a la medida de tu rostro.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa data-servicio="Extensiones de pestañas" href="#contacto">Agendar</a></div>
+        <div class="servicio"><div class="tarjeta"><span class="nombre">Micropigmentación</span><span class="muted">Pigmento semipermanente para definir y dar color.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa data-servicio="Micropigmentación" href="#contacto">Agendar</a></div>
+        <div class="servicio"><div class="tarjeta"><span class="nombre">Faciales</span><span class="muted">Cuidado de la piel para un acabado fresco y uniforme.</span><span class="precio">Consulta el precio</span></div><a class="btn borde bloque" data-wa data-servicio="Faciales" href="#contacto">Agendar</a></div>
       </div>
     </div>
   </section>
@@ -274,7 +274,11 @@
   };
 
   document.querySelectorAll("[data-wa]").forEach(a => {
-    a.href = "https://wa.me/" + ESTUDIO.whatsapp + "?text=" + encodeURIComponent(ESTUDIO.mensaje);
+    const servicio = a.dataset.servicio;
+    const texto = servicio
+      ? "Hola Silvia, me gustaría agendar una cita para " + servicio + ". ¿Qué disponibilidad tienes?"
+      : ESTUDIO.mensaje;
+    a.href = "https://wa.me/" + ESTUDIO.whatsapp + "?text=" + encodeURIComponent(texto);
     a.target = "_blank"; a.rel = "noopener";
   });
   document.querySelectorAll("[data-ig]").forEach(a => {
