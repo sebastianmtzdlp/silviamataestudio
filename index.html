@@ -113,14 +113,13 @@
   /* Para usar fotos reales: <img class="marco" src="img/archivo.jpg" alt="Descripción"> con object-fit: cover */
   img.marco { width: 100%; height: auto; object-fit: cover; padding: 0; }
 
-  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 900px; margin-bottom: 32px; }
+  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-bottom: 32px; }
   .tile { position: relative; aspect-ratio: 1; overflow: hidden; container-type: inline-size; background: var(--color-mist); }
   .tile iframe { position: absolute; left: -25%; top: calc(-54px - 12cqw); width: 150%; height: calc(150cqw + 200px); border: 0; pointer-events: none; }
   .tile a { position: absolute; inset: 0; z-index: 2; }
   .tile a:hover { background: rgba(0, 0, 0, .12); }
 
   /* Preguntas */
-  .faq { max-width: 780px; }
   details { border-top: 1px solid var(--color-ash); }
   details:last-of-type { border-bottom: 1px solid var(--color-ash); }
   summary { cursor: pointer; padding: 18px 40px 18px 0; font: 500 16px/1.4 var(--font-ui); list-style: none; position: relative; }
