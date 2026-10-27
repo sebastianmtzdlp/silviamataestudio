@@ -113,7 +113,12 @@
   /* Para usar fotos reales: <img class="marco" src="img/archivo.jpg" alt="Descripción"> con object-fit: cover */
   img.marco { width: 100%; height: auto; object-fit: cover; padding: 0; }
 
-  .ig-perfil { display: block; width: 100%; max-width: 860px; aspect-ratio: 1 / 1.2; border: 0; background: var(--color-paper); margin-bottom: 32px; }
+  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 900px; margin-bottom: 32px; }
+  .tile { position: relative; aspect-ratio: 1; overflow: hidden; container-type: inline-size; background: var(--color-mist); }
+  .tile iframe { position: absolute; left: 0; top: -54px; width: 100%; height: calc(100cqw + 140px); border: 0; pointer-events: none; }
+  .tile.reel iframe { top: calc(-54px - 39cqw); height: calc(178cqw + 140px); }
+  .tile a { position: absolute; inset: 0; z-index: 2; }
+  .tile a:hover { background: rgba(0, 0, 0, .12); }
 
   /* Preguntas */
   .faq { max-width: 780px; }
@@ -145,7 +150,6 @@
     .marcos { grid-template-columns: 1fr 1fr; }
     footer .cols { grid-template-columns: 1fr 1fr; }
   }
-  @media (max-width: 560px) { .ig-perfil { aspect-ratio: 1 / 1.45; } }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .nav { transition: none; } }
 </style>
 </head>
@@ -222,7 +226,17 @@
       <p class="eyebrow">Trabajo reciente</p>
       <h2 id="t-trabajo">Resultados reales</h2>
       <p class="muted intro">Mira antes y después, y trabajos recientes, en el Instagram del estudio.</p>
-      <iframe class="ig-perfil" src="https://www.instagram.com/silvia.mata.estudio/embed/" title="Publicaciones recientes de Silvia Mata Estudio en Instagram" loading="lazy" allowtransparency="true"></iframe>
+      <div class="ig-grid">
+        <div class="tile reel"><iframe src="https://www.instagram.com/reel/DcclHa9xlQ6/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/reel/DcclHa9xlQ6/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile"><iframe src="https://www.instagram.com/p/DbmTT1xETPx/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/p/DbmTT1xETPx/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile reel"><iframe src="https://www.instagram.com/reel/De3GgwXxG68/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/reel/De3GgwXxG68/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile"><iframe src="https://www.instagram.com/p/Dd-azEWR1qC/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/p/Dd-azEWR1qC/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile reel"><iframe src="https://www.instagram.com/reel/DbT0fC3PbPM/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/reel/DbT0fC3PbPM/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile"><iframe src="https://www.instagram.com/p/DeVViPvkUVF/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/p/DeVViPvkUVF/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile reel"><iframe src="https://www.instagram.com/reel/De-u10mxpKj/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/reel/De-u10mxpKj/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile"><iframe src="https://www.instagram.com/p/DeQQsmSER3U/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/p/DeQQsmSER3U/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+        <div class="tile reel"><iframe src="https://www.instagram.com/reel/De55IkAxQSR/embed/" title="" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a href="https://www.instagram.com/reel/De55IkAxQSR/" target="_blank" rel="noopener" aria-label="Ver publicación en Instagram"></a></div>
+      </div>
       <a class="btn borde" data-ig href="#contacto">Ver el Instagram de Silvia</a>
     </div>
   </section>
