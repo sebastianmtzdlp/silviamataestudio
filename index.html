@@ -113,8 +113,7 @@
   /* Para usar fotos reales: <img class="marco" src="img/archivo.jpg" alt="Descripción"> con object-fit: cover */
   img.marco { width: 100%; height: auto; object-fit: cover; padding: 0; }
 
-  .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: start; margin-bottom: 32px; }
-  .ig-post { width: 100%; aspect-ratio: 1 / 1.3; border: 0; background: var(--color-mist); display: block; }
+  .ig-perfil { display: block; width: 100%; max-width: 860px; aspect-ratio: 1 / 1.2; border: 0; background: var(--color-paper); margin-bottom: 32px; }
 
   /* Preguntas */
   .faq { max-width: 780px; }
@@ -143,11 +142,10 @@
     .conoce { grid-template-columns: 1fr; }
     .conoce .texto { padding: 8px var(--gutter) 48px; max-width: none; }
     .grid-servicios, .pasos { grid-template-columns: 1fr; }
-    .ig-grid { grid-template-columns: 1fr 1fr; }
     .marcos { grid-template-columns: 1fr 1fr; }
     footer .cols { grid-template-columns: 1fr 1fr; }
   }
-  @media (max-width: 560px) { .ig-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .ig-perfil { aspect-ratio: 1 / 1.45; } }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .nav { transition: none; } }
 </style>
 </head>
@@ -224,12 +222,7 @@
       <p class="eyebrow">Trabajo reciente</p>
       <h2 id="t-trabajo">Resultados reales</h2>
       <p class="muted intro">Mira antes y después, y trabajos recientes, en el Instagram del estudio.</p>
-      <div class="ig-grid">
-        <iframe class="ig-post" src="https://www.instagram.com/p/DbmTT1xETPx/embed/" title="Publicación de Instagram de Silvia Mata Estudio" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
-        <iframe class="ig-post" src="https://www.instagram.com/p/DeVViPvkUVF/embed/" title="Publicación de Instagram de Silvia Mata Estudio" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
-        <iframe class="ig-post" src="https://www.instagram.com/p/DeQQsmSER3U/embed/" title="Publicación de Instagram de Silvia Mata Estudio" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
-        <iframe class="ig-post" src="https://www.instagram.com/p/Dd-azEWR1qC/embed/" title="Publicación de Instagram de Silvia Mata Estudio" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
-      </div>
+      <iframe class="ig-perfil" src="https://www.instagram.com/silvia.mata.estudio/embed/" title="Publicaciones recientes de Silvia Mata Estudio en Instagram" loading="lazy" allowtransparency="true"></iframe>
       <a class="btn borde" data-ig href="#contacto">Ver el Instagram de Silvia</a>
     </div>
   </section>
