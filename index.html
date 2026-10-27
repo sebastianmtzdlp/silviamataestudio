@@ -113,6 +113,10 @@
   /* Para usar fotos reales: <img class="marco" src="img/archivo.jpg" alt="Descripción"> con object-fit: cover */
   img.marco { width: 100%; height: auto; object-fit: cover; padding: 0; }
 
+  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; margin-bottom: 32px; }
+  .ig-grid blockquote.instagram-media { margin: 0 !important; min-width: 0 !important; max-width: none !important; width: 100% !important; border-radius: 0 !important; }
+  .ig-grid blockquote a { font-size: 14px; }
+
   /* Preguntas */
   .faq { max-width: 780px; }
   details { border-top: 1px solid var(--color-ash); }
@@ -140,9 +144,11 @@
     .conoce { grid-template-columns: 1fr; }
     .conoce .texto { padding: 8px var(--gutter) 48px; max-width: none; }
     .grid-servicios, .pasos { grid-template-columns: 1fr; }
+    .ig-grid { grid-template-columns: 1fr 1fr; }
     .marcos { grid-template-columns: 1fr 1fr; }
     footer .cols { grid-template-columns: 1fr 1fr; }
   }
+  @media (max-width: 560px) { .ig-grid { grid-template-columns: 1fr; } }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .nav { transition: none; } }
 </style>
 </head>
@@ -219,6 +225,14 @@
       <p class="eyebrow">Trabajo reciente</p>
       <h2 id="t-trabajo">Resultados reales</h2>
       <p class="muted intro">Mira antes y después, y trabajos recientes, en el Instagram del estudio.</p>
+      <div class="ig-grid">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbmTT1xETPx/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DbmTT1xETPx/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcclHa9xlQ6/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcclHa9xlQ6/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeVViPvkUVF/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DeVViPvkUVF/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/De3GgwXxG68/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/De3GgwXxG68/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeQQsmSER3U/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DeQQsmSER3U/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dd-azEWR1qC/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dd-azEWR1qC/" target="_blank" rel="noopener">Ver publicación en Instagram</a></blockquote>
+      </div>
       <a class="btn borde" data-ig href="#contacto">Ver el Instagram de Silvia</a>
     </div>
   </section>
@@ -294,5 +308,6 @@
   const marca = () => nav.classList.toggle("scrolled", window.scrollY > 4);
   addEventListener("scroll", marca, { passive: true }); marca();
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
